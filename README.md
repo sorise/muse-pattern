@@ -8,5 +8,5 @@
 
 - [基本概念和原则](./contents/conception.md)
 - 组件协作模式
-  - [模板方法 template method]((./contents/TemplateMethod.md))
-  - [策略模式 strategy pattern]((./contents/StrategyPatterrn.md))
+  - [模板方法 template method](./contents/TemplateMethod.md)
+  - [策略模式 strategy pattern](./contents/StrategyPatterrn.md)
