@@ -10,10 +10,19 @@
   - C++ 编程技巧: CRTP
     - [奇异递归模板模式](./tech/CRTP.md)
     - [Mixin](./tech/Mixin.md)
+  
 - **创建型模式（Creational Patterns）**：这类模式关注对象的创建过程，包括实例化、配置和组合对象的方式。常见的创建型模式有单例模式、工厂模式、抽象工厂模式等。
+  
   - [建造者模式 - builder pattern](./contents/builderPatterms.md)
+  
 - **行为型模式（Behavioral Patterns）**：这类模式关注对象之间的通信和相互作用，用于描述算法和对象之间的职责分配和协作方式。常见的行为型模式有观察者模式、策略模式、命令模式等。
+  
   - [模板方法 template method](./contents/TemplateMethod.md)
   - [策略模式 strategy pattern](./contents/StrategyPatterrn.md)
+  - [观察者模式 observer pattern](./contents/ObserverPattern.md)
 - **结构型模式（Structural Patterns）**：这类模式关注对象和类之间的组合关系，用于描述如何将类和对象组合成更大的结构，以满足系统的需求。常见的结构型模式有适配器模式、装饰器模式、代理模式等。
-- 
+
+
+
+  
+
