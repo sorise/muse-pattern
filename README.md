@@ -22,7 +22,7 @@
   - [观察者模式 observer pattern](./contents/ObserverPattern.md)
 - **结构型模式（Structural Patterns）**：这类模式关注对象和类之间的组合关系，用于描述如何将类和对象组合成更大的结构，以满足系统的需求。常见的结构型模式有适配器模式、装饰器模式、代理模式等。
 
-
+​	
 
   
 

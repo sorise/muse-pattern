@@ -8,11 +8,9 @@
 
 ### 1. 基本概念
 
-* **主要解决：**一个对象状态改变给其他对象通知的问题，而且要考虑到易用和低耦合，保证高度的协作。
-* **何时使用：**一个对象（目标对象）的状态发生改变，所有的依赖对象（观察者对象）都将得到通知，进行广播通知。
-* **关键代码：**在抽象类里有一个列表存放观察者们
-
-
+* **主要解决**：一个对象状态改变给其他对象通知的问题，而且要考虑到易用和低耦合，保证高度的协作。
+* **何时使用**：一个对象（目标对象）的状态发生改变，所有的依赖对象（观察者对象）都将得到通知，进行广播通知。
+* **关键代码**：在抽象类里有一个列表存放观察者们
 
 
 
@@ -84,16 +82,6 @@ int main(){
 
 ### 2. 松耦合实现
 
-**订阅(抽象)观察者**：
-
-```cpp
-//抽象观察者
-class Observer {
-public:
-    virtual void response(bool light) = 0;
-};
-```
-
 **抽象主题**：
 
 * 具体注册方法
@@ -113,8 +101,53 @@ public:
 };
 ```
 
-**具体观察者**
+**具体主题**：
 
+```cpp
+// 具体主题、被观察者
+// 光线传感器
+class LightSensor : public Subject {
+public:
+    LightSensor() : _light() { }
+
+    void registerObserver(Observer* observer) override {
+        _observers.push_back(observer);
+    }
+
+    void removeObserver(Observer* observer) override {
+        _observers.erase(std::remove(_observers.begin(), _observers.end(), observer), _observers.end());
+    }
+
+    void notifyObservers(bool light) override {
+        for(Observer* observer : _observers) {
+            observer->response(light); //通知被观察者
+        }
+    }
+
+    void setLight(std::string& light) {
+        _light = light;
+        notifyObservers(light);
+    }
+
+private:
+    std::vector<Observer*> _observers;
+
+    std::string _light;
+};
+
+```
+
+**订阅(抽象)观察者**：
+
+```cpp
+//抽象观察者
+class Observer {
+public:
+    virtual void response(bool light) = 0;
+};
+```
+
+**具体观察者**
 ```cpp
 class LED : public Observer {
 public:

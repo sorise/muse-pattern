@@ -44,6 +44,17 @@
 
 <img src="./assets/image-20230806101400933.png" alt="image-20230806101400933" width="550px" />
 
+
+**SOLID** 设计模式的六大原则有：
+
+* Single Responsibility Principle：单一职责原则
+* Open Closed Principle：开闭原则
+* Liskov Substitution Principle：里氏替换原则
+* Law of Demeter：迪米特法则
+* Interface Segregation Principle：接口隔离原则
+* Dependence Inversion Principle：依赖倒置原则
+  
+
 #### 2.1 依赖倒置原则
 
 核心就两点：
