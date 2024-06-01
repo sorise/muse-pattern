@@ -38,8 +38,6 @@
 - 孩子妈收到消息后开始做饭
 - 孩子收到消息后，就赶紧收起手机，怕挨揍
 
-
-
 ```cpp
 #include <iostream>
 class Son{
