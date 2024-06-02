@@ -1,7 +1,8 @@
 #include <iostream>
 #include <cstdint>
 #include <memory>
-#include <utility>
+#include "ponder/di/di.hpp"
+
 
 class SendMessageService {
 public:
@@ -39,6 +40,9 @@ private:
 };
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    print_type<SendMessageService>();
+
+    std::cout << PONDER_DI_VERSION << std::endl;
+    std::cout << PONDER_DI_VERSION_STRING << std::endl;
     return 0;
 }

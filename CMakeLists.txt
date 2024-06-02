@@ -40,7 +40,7 @@ FetchContent_Declare(
         GIT_PROGRESS TRUE
 )
 
-#set(FETCHCONTENT_FULLY_DISCONNECTED ON)
+set(FETCHCONTENT_FULLY_DISCONNECTED ON)
 
 # 初始化外部内容
 FetchContent_MakeAvailable(googletest benchmark)
@@ -57,9 +57,9 @@ message(STATUS "Download googletest binary dir: ${googletest_BINARY_DIR}")
 message(STATUS "Download benchmark binary dir: ${benchmark_BINARY_DIR}")
 message(STATUS "Download benchmark binary dir: ${benchmark_BINARY_DIR}")
 
-set(PROGRAM_NAME "runner")
+INCLUDE_DIRECTORIES(include)
 
-add_executable(${PROGRAM_NAME} main.cpp)
+set(PROGRAM_NAME "ponder")
 
 function(INCLUDE_GOOGLE_TEST_BENCHMARK target_name)
     target_include_directories(${target_name} PUBLIC
@@ -70,4 +70,4 @@ function(INCLUDE_GOOGLE_TEST_BENCHMARK target_name)
     )
 endfunction()
 
-add_executable(ponder main.cpp)
+add_executable(${PROGRAM_NAME} main.cpp)
